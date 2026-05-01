@@ -2,11 +2,11 @@
 Aplicativo de gerenciamento de tarefas desenvolvido em React Native com Expo. O app permite criar, visualizar e organizar tarefas do dia a dia, com interface intuitiva e navegação fluida. Projeto desenvolvido como Checkpoint 2 da disciplina de Desenvolvimento Mobile.
 
 **Grupo:**
-- Fabiano Zague
-- Lorran dos Santos
-- Maria Clara
-- Pedro Certo
-- Vinicius Matareli
+- Fabiano Zague - 555524
+- Lorran dos Santos - 558982
+- Maria Clara - 557478
+- Pedro Certo - 556268
+- Vinicius Matareli - 555200
 
 ## Como rodar o projeto
 
