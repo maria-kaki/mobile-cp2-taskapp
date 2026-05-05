@@ -24,7 +24,11 @@ export function AppRoutes() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       {user ? (
-        <Stack.Screen name="Main" component={TabRoutes} />
+        <Stack.Screen
+          name="Main"
+          component={TabRoutes}
+          initialParams={{ initialTab: user.role === 'admin' ? 'Settings' : 'Tasks' }}
+        />
       ) : (
         <Stack.Screen name="Login" component={LoginScreen} />
       )}

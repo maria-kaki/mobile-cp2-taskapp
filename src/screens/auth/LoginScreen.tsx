@@ -81,7 +81,11 @@ export function LoginScreen() {
         setError(result.error ?? 'Erro ao fazer login.');
         shakeForm();
       } else {
-        navigation.reset({ index: 0, routes: [{ name: 'Main' }] });
+        const initialTab = result.role === 'admin' ? 'Settings' : 'Tasks';
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'Main', params: { initialTab } }],
+        });
       }
     } finally {
       setLoading(false);

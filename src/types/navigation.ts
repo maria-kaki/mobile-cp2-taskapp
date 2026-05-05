@@ -15,7 +15,7 @@ export type TabParamList = {
 
 export type RootStackParamList = {
   Login: undefined;
-  Main: undefined;
+  Main: { initialTab?: 'Home' | 'Tasks' | 'Settings' } | undefined;
 };
 
 export type TaskListScreenProps = NativeStackScreenProps<TaskStackParamList, 'TaskList'>;

@@ -9,8 +9,9 @@ import type { TabParamList } from '../types/navigation';
 
 const Tab = createBottomTabNavigator<TabParamList>();
 
-export function TabRoutes() {
+export function TabRoutes({ route }: any) {
   const { colors } = useTheme();
+  const initialTab = route?.params?.initialTab || 'Home';
 
   return (
     <Tab.Navigator
@@ -28,6 +29,7 @@ export function TabRoutes() {
         tabBarInactiveTintColor: colors.textMuted,
         tabBarLabelStyle: { fontSize: 11, fontWeight: '600' },
       }}
+      initialRouteName={initialTab as keyof TabParamList}
     >
       <Tab.Screen
         name="Home"
